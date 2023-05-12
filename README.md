@@ -4,7 +4,7 @@
 
 > From lecture notes: A **symbol table** is a data structure kept by a translator that allows it to keep track of each declared name and its binding
 
-In the following, I discuss the Clite language and 
+In the following, I discuss the Clite language, as well as static and dynamic scoping symbol table creation.
 
 ## The *Clite* language
 
@@ -64,12 +64,12 @@ Here is the output of the static scoping symbol table for the `course_example.cl
 
 ```shell
 (phdtrack-311) [onyr@kenzael programing_paradigm]$ python src/clite_symbol_table/static_scoping/main.py 
-Static symbol table generation...
-Scope (void B(int w) ) variables: <j, int, 3>, <k, int, 3>
-Scope (unnamed_scope_CIFan) variables: <i, int, 13>, <j, int, 13>, <m, char, 14>
-Scope (void A(int x, int y) ) variables: <i, float, 9>, <j, float, 9>
+Dynamic symbol table generation...
+Scope (void B(int w) ) variables: <w, int, 2>, <j, int, 3>, <k, int, 3>
+Scope (unnamed_scope_ZqDBt) variables: <i, int, 13>, <j, int, 13>, <m, char, 14>
+Scope (void A(int x, int y) ) variables: <x, int, 8>, <y, int, 8>, <i, float, 9>, <j, float, 9>
 Scope (void main() ) variables: <a, int, 21>, <b, int, 21>
-Scope (global) variables: <h, int, 1>, <i, int, 1>
+Scope (global) variables: <h, int, 1>, <i, int, 1>, <B, void, 2>, <A, void, 8>, <main, void, 20>
 ```
 
 ## Dynamic scoping
