@@ -85,3 +85,12 @@ The code parses a source file line by line, identifying variable declarations an
 > The code has been tested on Fedora 34.
 
 Here is the output of the static scoping symbol table for the `course_example.clite` input *Clite* file:
+
+```shell
+(phdtrack-311) [onyr@kenzael programing_paradigm]$ python src/clite_symbol_table/dynamic_scoping/main.py 
+Static symbol table generation...
+Scope (void B(int w) ) variables: <w, int, 2>, <j, int, 3>, <k, int, 3>
+Scope (unnamed_scope_KXvrx) variables: <i, int, 13>, <j, int, 13>, <m, char, 14>
+Scope (void A(int x, int y) ) variables: <x, int, 8>, <y, int, 8>, <i, float, 9>, <j, float, 9>
+Scope (main) variables: <h, int, 1>, <i, int, 1>, <B, void, 1>, <A, void, 7>, <main, void, 19>, <a, int, 21>, <b, int, 21>
+```
