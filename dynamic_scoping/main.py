@@ -60,7 +60,7 @@ class Translator:
     current_scope: Scope
 
     def __init__(self) -> None:
-        print("Static symbol table generation...")
+        print("Dynamic symbol table generation...")
 
         with open(TEST_FILE) as f:
             lines = f.readlines()
