@@ -48,8 +48,7 @@ void main() {
 }
 ```
 
-
-## static scoping
+## Static scoping
 
 I have implementing a simple static scoping symbol table.  The code implements a static scoping symbol table for a programming language define in the lecture (Clite). 
 
@@ -61,9 +60,7 @@ The code parses a source file line by line, identifying variable declarations an
 
 > The code has been tested on Fedora 34.
 
-Here is the output for the following input *Clite* file:
-
-Output of the static scoping symbol table for the `course_example.clite` input *Clite* file:
+Here is the output of the static scoping symbol table for the `course_example.clite` input *Clite* file:
 
 ```shell
 (phdtrack-311) [onyr@kenzael programing_paradigm]$ python src/clite_symbol_table/static_scoping/main.py 
@@ -74,3 +71,17 @@ Scope (void A(int x, int y) ) variables: <i, float, 9>, <j, float, 9>
 Scope (void main() ) variables: <a, int, 21>, <b, int, 21>
 Scope (global) variables: <h, int, 1>, <i, int, 1>
 ```
+
+## Dynamic scoping
+
+I have implementing a simple dynamic scoping symbol table. The code implements a dynamic scoping symbol table for a programming language define in the lecture (Clite).
+
+An example of the results expected is given in lecture notes:
+
+![dynamic symbol table creation](./img/clite_program_dynamic_scope_symbol_table.png)
+
+The code parses a source file line by line, identifying variable declarations and the start and end of scopes (i.e., blocks of code).
+
+> The code has been tested on Fedora 34.
+
+Here is the output of the static scoping symbol table for the `course_example.clite` input *Clite* file:

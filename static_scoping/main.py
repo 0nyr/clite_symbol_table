@@ -1,3 +1,4 @@
+# static scoping symbol table generation
 from dataclasses import dataclass
 import random
 import string
